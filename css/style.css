@@ -1,0 +1,348 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: lightpink;
+	font-family: 'Indie Flower', cursive;
+}
+
+
+/** HEADER **/
+header {
+	margin-top: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+h1 {
+	margin: auto;
+	text-align: center;
+	color: darkred;
+	font-size: 2.5em;
+}
+
+
+/** TOMATO **/
+.box {
+	position: relative;
+	margin: auto;
+	margin-top: 40px;
+	display: block;
+	width: 400px;
+	height: 280px;
+}
+
+.smile {
+	height: 50%;
+	width: 50%;
+}
+
+.outline {
+	position: absolute;
+	top: 16.5%;
+	left: 25%;
+	width: 50%;
+	height: 67%;
+	background: #D9482B;
+	border-radius: 50%;
+    -webkit-animation: roll 22s infinite;
+            animation: roll 22s infinite;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+}
+
+@-webkit-keyframes roll {
+	0% {}
+	45% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	50% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+	90% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+	95% {-webkit-transform: rotate(-5deg);transform: rotate(-5deg)}
+	100% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+}
+
+@keyframes roll {
+	0% {}
+	45% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	50% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+	90% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+	95% {-webkit-transform: rotate(-5deg);transform: rotate(-5deg)}
+	100% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+}
+
+.outline-shadow {
+  position: absolute;
+  top: 80%;
+  left: 36%;
+  background-color: rgba(0,0,0,0.25);
+  width: 30%;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.eye-left {
+  position: absolute;
+  background: white;
+  top: 25%;
+  left: 30%;
+  height: 25%;
+  width: 17%;
+  border-radius: 50%;
+}
+
+.eye-right {
+  position: absolute;
+  background: white;
+  top: 25%;
+  right: 30%;
+  height: 25%;
+  width: 17%;
+  border-radius: 50%;
+}
+
+.pupil {
+  position: absolute;
+  background: black;
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+  left: 10%;
+  top: 15%;
+  -webkit-animation: look-up 30s infinite, look-right 20s infinite;
+          animation: look-up 30s infinite, look-right 20s infinite;
+}
+
+@-webkit-keyframes look-up {
+	0% {}
+	2% {top: 5%;}
+	50% {top: 5%;}
+	52% {top: 15%;}
+}
+
+@keyframes look-up {
+	0% {}
+	2% {top: 5%;}
+	50% {top: 5%;}
+	52% {top: 15%;}
+}
+
+@-webkit-keyframes look-right {
+	0% {}
+	15% {left: 10%;}
+	17% {left: 20%;}
+	50% {left: 20%;}
+	52% {left: 10%;}
+}
+
+@keyframes look-right {
+	0% {}
+	15% {left: 10%;}
+	17% {left: 20%;}
+	50% {left: 20%;}
+	52% {left: 10%;}
+}
+
+.smile {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+}
+
+.leaf {
+	position: absolute;
+	width: 10%;
+	height: 20%;
+	left: 45%;
+	top: -5%;
+	background: #627935;
+	border-radius: 50%;
+}
+
+.leaf::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+	height: 45%;
+	left: 40%;
+	top: 0%;
+	background: #627935;
+	border-radius: 50%;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+}
+
+.leaf::after{
+ 	content: "";
+    position: absolute;
+    width: 250%;
+	height: 45%;
+	right: 40%;
+	background: #627935;
+	border-radius: 50%;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+}
+
+
+/** POMODORO UI **/
+section {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	cursor: default;
+}
+
+#pomodoroUI {
+	display: flexbox;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.row {
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+.row div {
+	padding: 15px 0px;
+}
+
+.col div {
+	padding: 0;
+}
+
+.control-title {
+	margin-bottom: 3px;
+}
+
+.bottom-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 350px;
+	margin: auto;
+	margin-top: -45px;
+}
+
+#breakMinusFive, #breakPlusFive, #sessionMinusFive, #sessionPlusFive {
+	cursor: pointer;
+}
+
+.bottom-row {
+	width: 550px;
+}
+
+.bottom-row .col {
+	font-size: 1.2em;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+#breakNum, #sessionNum {
+	display: inline-block;
+	padding: 0 6px;
+	width: 40px;
+}
+
+#breakNum, #sessionNum {
+	position: relative;
+	bottom: 8px;
+}
+
+
+
+.row h1 {
+	display: inline;
+	color: black;
+	height: 70px;
+}
+
+.row h3 {
+	display: inline;
+	color: black;
+	height: 70px;	
+}
+
+.border {
+	padding: 6px 20px;
+	margin: 0px 60px;
+	background: rgba(255,255,255, 0.3);
+	border: 3px solid white;
+	border-radius: 10px;	
+	cursor: pointer;
+	-webkit-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+}
+
+.border:hover {
+	background: rgba(255,255,255, 0.5);
+}
+
+.btn /** plus and minus signs **/ {
+	font-size: 2em;
+}
+
+
+
+
+
+
+/** FOOTER **/
+footer {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.5em;
+	position: fixed;
+	bottom: 0px;
+	height: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+@media (max-height: 550px) {
+	footer {
+		display: none;
+	}
+}
+
+footer p {
+	text-align: center;
+}
+
+footer a {
+	color: black;
+	text-decoration: none;
+	-webkit-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+footer a:hover {
+	color: darkred;
+}
+/*# sourceMappingURL=../dist/css/maps/style.css.map */

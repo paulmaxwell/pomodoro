@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pomodoro Timer</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower" rel="stylesheet">
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<audio id="alarm">
+		<source src="audio/alarm.mp3" type="audio/mpeg">
+	</audio>
+	
+	<header>
+		<h1>Pomodoro Timer</h1>
+	</header>
+
+	<div class="box">
+		<div class="outline-shadow"></div>
+		<div class="tomato">
+			<div class="outline">
+				<div class="outline-copy">
+					<div class="eye-left"><div class="pupil"></div></div>
+	     		    <div class="eye-right"><div class="pupil"></div></div>
+					<svg class="smile">
+				        <path d="M 0 5 Q 30 30 60 0 " stroke="black" stroke-width="1" fill="none">
+				    </svg>
+					<div class="leaf"></div>
+					
+				</div>
+			</div>
+		</div><!-- end tomato -->
+	</div><!-- end box -->
+
+	<section id="pomodoroUI">
+
+		<div class="row top-row">
+			<div><h2 id="timeType">Session Time:</h2></div>
+			<div><h1 id="timerDisplay"></h1></div>
+			<div><h3 id="reset" class="border">Reset</h3></div>
+		</div><!-- end container-narrow-1-col -->
+
+		<div class="row bottom-row">
+			<div class="col">
+				<div class="control-title"><h3>Break</h3></div>
+				<div>
+					<div id="breakMinusFive" class="inline-block btn"><h3>&minus;</h3></div>
+					<div class="inline-block"><h3 id="breakNum">5</h3></div>
+					<div id="breakPlusFive" class="inline-block btn"><h3>&plus;</h3></div>
+				</div>
+			</div><!-- end col -->
+			
+			<div><h2 id="start" class="border">Start</h2></div>
+
+			<div class="col">
+				<div class="control-title"><h3>Session</h3></div>
+				<div>
+					<div id="sessionMinusFive" class="inline-block btn"><h3>&minus;</h3></div>
+					<div class="inline-block"><h3 id="sessionNum">25</h3></div>
+					<div id="sessionPlusFive" class="inline-block btn"><h3>&plus;</h3></div>
+				</div>
+			</div><!-- end col -->
+
+		</div><!-- end row bottom-row -->
+
+	</section>
+
+
+
+<footer><p>code by <a href="http://www.paulmaxwell.co.uk">Paul Maxwell</a></p></footer>
+
+
+</body>
+</html>
